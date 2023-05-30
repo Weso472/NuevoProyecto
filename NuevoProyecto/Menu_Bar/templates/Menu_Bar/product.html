@@ -1,0 +1,10 @@
+{% extends "Menu_Bar/base.html" %}
+
+{% block content %}
+    <div>
+        <h3>{{ product }}</h3>
+        <span class="date">{{ product.created }}</span>
+        <p>{{ product.description }}</p>
+        <a href="{% url 'home' %}">Volver a home</a>
+    </div>
+{% endblock %}
