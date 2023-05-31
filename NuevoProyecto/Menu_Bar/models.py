@@ -6,7 +6,7 @@ class Product(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     price = models.FloatField(null=True)
-    image = models.ImageField(blank=True)
+    image = models.ImageField(upload_to='menu_photos', blank=True)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now_add=True)
 

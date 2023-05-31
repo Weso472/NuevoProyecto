@@ -18,8 +18,15 @@ from django.contrib import admin
 from django.urls import path
 from Menu_Bar.views import home, product
 
+from django.conf.urls.static import static    #PARA IMAGENES
+from django.conf import settings
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name="home"),
     path('product/<id>', product, name="product")
 ]
+
+
+# Para las imagenes
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

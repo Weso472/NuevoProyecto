@@ -3,8 +3,12 @@
 {% block content %}
     <div>
         <h3>{{ product }}</h3>
-        <span class="date">{{ product.created }}</span>
+        <img src="{{product.image.url}}" class="top"/>
+        <p class="date">{{ product.created }}</p>
         <p>{{ product.description }}</p>
         <a href="{% url 'home' %}">Volver a home</a>
     </div>
 {% endblock %}
+
+
+{{album_musica.portada.url}}
